@@ -1,9 +1,9 @@
 const gameBoard = document.querySelector("#gameboard")   
 const infoDisplay = document.querySelector("#info")
 const startCells = [
-   "", "", "", "", "", "", "", "", "",""
+      "", "", "", "", "", "", "", "", ""
 ]
-let go = "cicle"
+let go = "circle"
 infoDisplay.textContent = "Circle goes first"
 
 function createBoard() {
@@ -22,7 +22,7 @@ function addGo(e) {
    goDisplay.classList.add(go)
    e.target.append(goDisplay)
    go = go === "circle" ? "cross" : "circle"
-   infoDisplay.textContent = "it is now" + go + "'s go."
+   infoDisplay.textContent = "it is now " + go + "'s go."
    e.target.removeEventListener("click", addGo)
    checkScore()
 }
@@ -31,8 +31,8 @@ function checkScore() {
       const allSquares = document.querySelectorAll(".square")
       const winningCombos = [
       [0,1,2], [3,4,5],[6,7,8],
-      [0,3,6], [1,4,7],[2,5,8]
-      [0,4,8], [2,4,6]
+      [0,3,6], [1,4,7],[2,5,8],
+      [0,4,8], [2,4,6],[3,6,9],
    ]
       winningCombos.forEach(array => {
         const circleWins = array.every(cell =>
