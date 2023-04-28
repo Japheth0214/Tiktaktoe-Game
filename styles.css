@@ -1,9 +1,9 @@
-.body {
-   margin:0;
-   padding:0;
+body {
+   margin: 0;
+   padding: 0;
    display: flex;
    justify-content: center;
-   align-self:center;
+   align-self: center;
    flex-direction: column;
    height: 100vh;
 }
@@ -14,6 +14,7 @@ height: 300px;
 background-color: black;
 display: flex;
 flex-wrap: wrap;
+border: solid 1px black;
 }
 
 .square {
@@ -30,9 +31,9 @@ flex-wrap: wrap;
 
 .circle {
    height: 90px;
-   width:90px;
+   width: 90px;
    border-radius: 50%;
-   border:15px solid blue;
+   border: 15px solid blue;
    box-sizing: border-box;
 }
 
@@ -51,6 +52,13 @@ flex-wrap: wrap;
 
 .cross:before {
    left: 50%;
+   height: 30%;
+   margin-left: -15%;
+   height: 100%;
+}
+
+.cross:after {
+   top: 50%;
    height: 30%;
    margin-top: -15%;
    width: 100%;
